@@ -1,0 +1,24 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background: transparent; /* Ensures the background remains the stream */
+}
+
+.overlay-container {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
+  width: 40vh;
+  height: fit-content;
+  max-height: calc(100vh - 5rem);
+  padding: 10px;
+  display: flex;
+  position: absolute;
+  right: 0;
+  top: 0;
+  opacity: 0.7;
+}
