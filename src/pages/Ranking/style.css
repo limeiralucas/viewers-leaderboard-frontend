@@ -4,7 +4,7 @@ html, body {
   height: 100%;
   width: 100%;
   overflow: hidden;
-  background: transparent; /* Ensures the background remains the stream */
+  background: transparent;
 }
 
 .overlay-container {

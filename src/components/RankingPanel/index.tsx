@@ -1,21 +1,29 @@
 import "./style.css";
 
-export default function RankingPanel() {
+type RankingPanelProps = {
+  viewersRanking: ViewersRanking
+}
+
+type ViewerScoreProps = {
+  viewerScore: ViewerScore
+}
+
+export default function RankingPanel(props: RankingPanelProps) {
+  const { viewersRanking } = props;
+
   return <div class="ranking-container">
     <h4>Ranking</h4>
-    <UserScore />
-    <UserScore />
-    <UserScore />
-    <UserScore />
-    <UserScore />
+    { viewersRanking.map((viewerScore) => <ViewerScore viewerScore={viewerScore}/>) }
   </div>
 }
 
-function UserScore() {
+function ViewerScore(props: ViewerScoreProps) {
+  const { viewerScore } = props;
+
   return <div class="user-score-container">
     <UserPhoto />
-    <p class="username">lucasalveslm</p>
-    <p class="score">1000</p>
+    <p class="username">{viewerScore.username}</p>
+    <p class="score">{viewerScore.score}</p>
   </div>
 }
 
