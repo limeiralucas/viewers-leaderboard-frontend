@@ -1,5 +1,5 @@
 # viewers-leaderboard-frontend
-A Twitch extension that shows a leaderboard of viewers
+A Twitch extension that shows a leaderboard of viewers.
 
 ## How to setup the project
 
@@ -7,20 +7,20 @@ A Twitch extension that shows a leaderboard of viewers
 This project uses NodeJS 20.17, so make sure you have it installed. You can download the necessary version from [NodeJS official website](https://nodejs.org/en/download/package-manager/current) or install it using your preferred method.
 
 ### Install pnpm
-The project dependencies are managed using [pnpm](https://pnpm.io/), a faster alternative to NodeJS npm. To install it, just open the terminal and execute the following command:
+The project dependencies are managed using [pnpm](https://pnpm.io/), a faster alternative to npm. To install it, open the terminal and execute the following command:
 
 ```shell
 npm install -g pnpm
 ```
 
 ### Install dependencies
-After installing pnpm, the next step is install the project dependencies. To do so, just execute:
+After installing pnpm, the next step is to install the project dependencies. To do so, just execute:
 
 ```shell
 pnpm install
 ```
 
-### Run locally or build project
+### Run locally or build the project
 
 -   `pnpm run dev` - Starts a dev server at http://localhost:5173/
 
@@ -30,7 +30,7 @@ pnpm install
 
 ### Set environment variables
 
-The project provides a `.env.example` containing the available environment variables.
+The project provides a `.env.example` file containing the available environment variables.
 
 #### Backend host
 
