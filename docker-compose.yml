@@ -1,0 +1,11 @@
+services:
+  frontend:
+    build: .
+    container_name: viewers_leaderboard_frontend
+    ports:
+      - "5173:5173"
+    environment:
+      PORT: 5173
+      VITE_API_BASE_URL: http://backend:8000
+    env_file:
+      - .env
