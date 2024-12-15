@@ -1,6 +1,6 @@
 type ViewerScore = {
   username: string;
-  profilePictureUrl: string;
+  profilePicture: string;
   score: number;
 }
 
