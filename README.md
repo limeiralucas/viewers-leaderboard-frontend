@@ -40,6 +40,13 @@ This project make request to the required backend [viewers-leaderboard-backend](
 VITE_API_BASE_URL="http://backend-host:8000"
 ```
 
+#### Update interval
+The update interval for the ranking panel can be configured using the environment variable `VITE_RANKING_UPDATE_INTERVAL_MS` (in milliseconds). The default value is `60000` (1 minute).
+
+```shell
+VITE_RANKING_UPDATE_INTERVAL_MS=60000
+```
+
 #### Overriding values for testing purposes
 
 If you're testing the application outside Twitch, you'll probably need to force some values to simulate the platform. You can do so using the following environment variables:

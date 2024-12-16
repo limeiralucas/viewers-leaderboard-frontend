@@ -1,10 +1,11 @@
 import { getViewersRanking } from "@/api/viewersRanking";
 import RankingPanel from "../../components/RankingPanel";
-import "./style.css";
 import { useEffect, useState } from "preact/hooks";
+import { RANKING_UPDATE_INTERVAL_MS } from "@/config";
+import "./style.css";
 
 type RankingProps = {
-  channelId: string
+  channelId: string,
 }
 
 export function Ranking(props: RankingProps) {
@@ -19,7 +20,7 @@ export function Ranking(props: RankingProps) {
     updateViewersRanking();
     const timer = setInterval(
       updateViewersRanking,
-      60000,
+      RANKING_UPDATE_INTERVAL_MS,
     );
 
     setRankingRequestTimer(timer);
