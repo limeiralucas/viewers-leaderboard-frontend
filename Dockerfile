@@ -17,14 +17,18 @@ RUN pnpm install
 RUN pnpm run build
 
 # Run stage
-FROM node:$NODE_BASE
+FROM nginx:1.27.3-alpine
 
-# Add serve module
-RUN npm install -g serve
+RUN rm -rf /usr/share/nginx/html/*
 
 # Copy application files
-COPY --from=build /app/dist /dist
+COPY --from=build /app/dist /usr/share/nginx/html
 
-EXPOSE $PORT
+# Copy nginx configuration
+COPY ./nginx/nginx.conf /etc/nginx
 
-CMD ["serve", "-s", "dist"]
+# Set dynamic env variables
+COPY env.sh /docker-entrypoint.d/env.sh
+RUN chmod +x /docker-entrypoint.d/env.sh
+
+EXPOSE 80
