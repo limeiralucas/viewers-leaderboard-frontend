@@ -1,7 +1,8 @@
 import { LocationProvider, Route, Router } from "preact-iso";
 import { useEffect, useState } from "preact/hooks";
-import { Ranking } from "../../pages/Ranking";
-import { NotFound } from "../../pages/_404";
+import { Config } from "@/pages/Config";
+import { Ranking } from "@/pages/Ranking";
+import { NotFound } from "@/pages/_404";
 import { apiClient } from "@/api/client";
 import { notifyNewViewer } from "@/api/webhook";
 import { FORCE_CHANNEL_ID } from "@/config";
@@ -35,6 +36,7 @@ export default function App() {
     <LocationProvider>
       <main>
         <Router>
+          <Route path="/config" component={Config} />
           <Route path="/ranking" component={Ranking} channelId={channelId} />
           <Route default component={NotFound} />
         </Router>
