@@ -6,5 +6,7 @@ export function Config() {
 
   return <div class="subscribe-container">
     <a href={configUrl} about="_blank">Subscribe webhooks</a>
+    <p>or access directly:</p>
+    <span>{configUrl}</span>
   </div>;
 };
